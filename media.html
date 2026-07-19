@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Media — SmartMoney Group</title>
+<meta name="description" content="Hear the stories behind the startups, investors, and innovation leaders shaping the Heartland.">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header id="site-header"></header>
+
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow on-dark">Connective Tissue</p>
+    <h1>Media</h1>
+    <p class="lede">Hear the stories behind the startups, investors, and innovation leaders shaping the Heartland.</p>
+  </div>
+</section>
+
+<section class="section section-warm" data-reveal>
+  <div class="container">
+    <div class="section-head">
+      <h2>"Instant Insights"</h2>
+      <p>Video podcast snacks, looping — hover to pause, click to play.</p>
+    </div>
+  </div>
+  <div class="insights-viewport">
+    <div class="insights-track" id="insightsTrack">
+      <div class="snack"><span class="snack-tag">Clip</span><span class="snack-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span><span class="snack-label">Raising a Series A in the Midwest</span></div>
+      <div class="snack"><span class="snack-tag">Clip</span><span class="snack-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span><span class="snack-label">What LPs actually ask for</span></div>
+      <div class="snack"><span class="snack-tag">Clip</span><span class="snack-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span><span class="snack-label">Scientist to CEO, in 90 seconds</span></div>
+      <div class="snack"><span class="snack-tag">Clip</span><span class="snack-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span><span class="snack-label">Inside an exit map</span></div>
+      <div class="snack"><span class="snack-tag">Clip</span><span class="snack-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span><span class="snack-label">Board meetings 101</span></div>
+      <div class="snack"><span class="snack-tag">Clip</span><span class="snack-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span><span class="snack-label">Capital stacking, explained</span></div>
+      <div class="snack" aria-hidden="true"><span class="snack-tag">Clip</span><span class="snack-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span><span class="snack-label">Raising a Series A in the Midwest</span></div>
+      <div class="snack" aria-hidden="true"><span class="snack-tag">Clip</span><span class="snack-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span><span class="snack-label">What LPs actually ask for</span></div>
+      <div class="snack" aria-hidden="true"><span class="snack-tag">Clip</span><span class="snack-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span><span class="snack-label">Scientist to CEO, in 90 seconds</span></div>
+      <div class="snack" aria-hidden="true"><span class="snack-tag">Clip</span><span class="snack-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span><span class="snack-label">Inside an exit map</span></div>
+      <div class="snack" aria-hidden="true"><span class="snack-tag">Clip</span><span class="snack-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span><span class="snack-label">Board meetings 101</span></div>
+      <div class="snack" aria-hidden="true"><span class="snack-tag">Clip</span><span class="snack-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span><span class="snack-label">Capital stacking, explained</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-porcelain" id="episodes" data-reveal="stagger">
+  <div class="container">
+    <div class="section-head">
+      <h2>SmartMoney Ventures Podcast</h2>
+      <p>Episodes, guests, and topics from across the Heartland's venture ecosystem.</p>
+    </div>
+    <div class="grid grid-4">
+      <div class="card"><p class="eyebrow">Browse</p><h3>Episodes</h3><p>The full catalog of conversations, newest first.</p></div>
+      <div class="card"><p class="eyebrow">Browse</p><h3>Guests</h3><p>Founders, investors, and innovation leaders who've joined us.</p></div>
+      <div class="card"><p class="eyebrow">Browse</p><h3>Topics</h3><p>Fundraising, exits, capital stacking, and more.</p></div>
+      <div class="card" id="sponsors"><p class="eyebrow">Support</p><h3>Sponsors</h3><p>The partners who make the podcast possible.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-dark" id="newsletter" data-reveal>
+  <div class="container grid grid-2" style="align-items:center;">
+    <div>
+      <p class="eyebrow on-dark">Stay in the loop</p>
+      <h2 style="color:var(--porcelain);font-size:clamp(26px,3.2vw,38px);">Newsletter &amp; SubStack</h2>
+      <p style="color:var(--dim-on-dark);line-height:1.75;margin-top:16px;">Get new episodes, reports, and Heartland venture news — free tier available.</p>
+    </div>
+    <form class="newsletter-form" style="max-width:420px;" onsubmit="event.preventDefault(); this.querySelector('.form-note-inline') || (this.insertAdjacentHTML('afterend','<p class=\'form-note\'>You&#39;re in — check your inbox to confirm.</p>')); this.reset();">
+      <label class="visually-hidden" for="mediaEmail">Email</label>
+      <input type="email" id="mediaEmail" placeholder="you@company.com" required>
+      <button class="btn btn-gold" type="submit">Subscribe</button>
+    </form>
+  </div>
+</section>
+
+<footer id="site-footer"></footer>
+
+<script>window.SMG_PAGE = 'media.html';</script>
+<script src="js/chrome.js"></script>
+<script>
+  var t = document.getElementById('insightsTrack');
+  if(t){ t.addEventListener('mouseenter', function(){ t.style.animationPlayState='paused'; }); t.addEventListener('mouseleave', function(){ t.style.animationPlayState='running'; }); }
+</script>
+</body>
+</html>

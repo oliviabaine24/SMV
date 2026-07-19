@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — SmartMoney Group</title>
+<meta name="description" content="Get in touch with SmartMoney Group — partnerships, nominations, speaking, and sponsorships.">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+  .contact-form{ display:flex; flex-direction:column; gap:16px; }
+  .contact-form label{ font-size:12px; font-weight:600; letter-spacing:.08em; text-transform:uppercase; color:var(--dim); margin-bottom:6px; display:block; }
+  .contact-form input, .contact-form select, .contact-form textarea{
+    width:100%; padding:13px 14px; border-radius:2px; border:1px solid var(--line); background:#fff;
+    font-family:'Inter',sans-serif; font-size:14.5px; color:var(--ink);
+  }
+  .contact-form textarea{ min-height:130px; resize:vertical; }
+  .contact-form input:focus, .contact-form select:focus, .contact-form textarea:focus{ outline:2px solid var(--gold-deep); outline-offset:1px; }
+  .quick-links{ display:flex; flex-direction:column; gap:14px; }
+  .quick-links a{ display:flex; align-items:center; justify-content:space-between; padding:16px 18px; border:1px solid var(--line-on-dark); border-radius:3px; text-decoration:none; color:var(--porcelain); font-size:14.5px; transition:border-color .3s var(--ease), background .3s var(--ease); }
+  .quick-links a:hover{ border-color:var(--gold); background:rgba(245,246,244,.04); }
+</style>
+</head>
+<body>
+
+<header id="site-header"></header>
+
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow on-dark">Connect</p>
+    <h1>Let's build the Heartland's next chapter.</h1>
+    <p class="lede">Partnerships, nominations, speaking requests, sponsorships — tell us what you're working on.</p>
+  </div>
+</section>
+
+<section class="section section-porcelain" data-reveal>
+  <div class="container grid grid-2" style="gap:56px;align-items:start;">
+    <form class="contact-form" id="contactForm">
+      <div>
+        <label for="cName">Name</label>
+        <input type="text" id="cName" required>
+      </div>
+      <div>
+        <label for="cEmail">Email</label>
+        <input type="email" id="cEmail" required>
+      </div>
+      <div>
+        <label for="cReason">I'm reaching out about</label>
+        <select id="cReason">
+          <option>Partnering with SmartMoney Group</option>
+          <option>Nominating a company for OVP All-Stars</option>
+          <option>Speaking at an event</option>
+          <option>Sponsoring the podcast or a report</option>
+          <option>Something else</option>
+        </select>
+      </div>
+      <div>
+        <label for="cMsg">Message</label>
+        <textarea id="cMsg" required></textarea>
+      </div>
+      <button class="btn btn-solid" type="submit" style="align-self:flex-start;">Send Message</button>
+      <p class="form-note" id="contactNote" style="color:var(--dim);"></p>
+    </form>
+
+    <div class="card" style="background:var(--ink);border:none;">
+      <p class="eyebrow on-dark">Quick Links</p>
+      <div class="quick-links mt-16">
+        <a href="about.html#speaking">Request a Speaker &rarr;</a>
+        <a href="intelligence.html">Nominate a Company &rarr;</a>
+        <a href="media.html#sponsors">Sponsor the Podcast &rarr;</a>
+        <a href="education.html#programs">Bring DealMaker Academy to Campus &rarr;</a>
+      </div>
+      <hr class="divider on-dark mt-24" style="margin-bottom:24px;">
+      <p class="eyebrow on-dark">Newsletter</p>
+      <form class="newsletter-form" id="contactNewsletter">
+        <label class="visually-hidden" for="cnEmail">Email</label>
+        <input type="email" id="cnEmail" placeholder="you@company.com" required>
+        <button class="btn btn-gold" type="submit">Join</button>
+      </form>
+      <p class="form-note" id="cnNote">Podcast newsletter + SubStack, free tier.</p>
+    </div>
+  </div>
+</section>
+
+<footer id="site-footer"></footer>
+
+<script>window.SMG_PAGE = 'contact.html';</script>
+<script src="js/chrome.js"></script>
+<script>
+  var cf = document.getElementById('contactForm');
+  if(cf){
+    cf.addEventListener('submit', function(e){
+      e.preventDefault();
+      document.getElementById('contactNote').textContent = "Thanks — we'll be in touch shortly.";
+      cf.reset();
+    });
+  }
+  var cn = document.getElementById('contactNewsletter');
+  if(cn){
+    cn.addEventListener('submit', function(e){
+      e.preventDefault();
+      document.getElementById('cnNote').textContent = "You're in — check your inbox to confirm.";
+      cn.reset();
+    });
+  }
+</script>
+</body>
+</html>
